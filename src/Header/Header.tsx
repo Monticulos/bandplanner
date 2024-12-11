@@ -1,6 +1,8 @@
-﻿export const Header = () => {
+﻿import classes from "./Header.module.css"
+
+export const Header = () => {
     return (
-        <header>
+        <header className={classes.header}>
             <h1>Band practice planner</h1>
         </header>
     )
