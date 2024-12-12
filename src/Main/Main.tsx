@@ -1,6 +1,7 @@
 ﻿import classes from "./Main.module.css";
+import React, { ReactElement } from "react";
 
-export const Main = () => {
+export const Main = (): ReactElement => {
   return (
     <main className={classes.main}>
       <h1>Heading 1</h1>
