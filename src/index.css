@@ -1,10 +1,10 @@
 body {
   --accent-color: #e67d1c;
-  --background-color: #1E2B3C;
-  --text-color: #FFF;
-  --border: 1px solid #FFF;
+  --background-color: #1e2b3c;
+  --text-color: #fff;
+  --border: 1px solid #fff;
   --padding: 1rem;
-  
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   height: 100vh;
   color: var(--text-color);
@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
- font-size: 3rem;
+  font-size: 3rem;
 }
 
 h3 {

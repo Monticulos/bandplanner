@@ -1,9 +1,9 @@
-﻿import classes from "./Footer.module.css"
+﻿import classes from "./Footer.module.css";
 
 export const Footer = () => {
-    return (
-        <header className={classes.footer}>
-            <p>Band practice planner</p>
-        </header>
-    )
-}
+  return (
+    <header className={classes.footer}>
+      <p>Band practice planner</p>
+    </header>
+  );
+};
