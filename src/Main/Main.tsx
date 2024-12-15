@@ -1,5 +1,5 @@
-﻿import classes from "./Main.module.css";
-import React, { ReactElement } from "react";
+﻿import React, { ReactElement } from "react";
+import classes from "./Main.module.css";
 
 export const Main = (): ReactElement => {
   return (

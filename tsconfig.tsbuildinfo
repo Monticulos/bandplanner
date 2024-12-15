@@ -1,0 +1,1 @@
+{"root":["./vite.config.ts","./vitest.config.ts","./src/entry.tsx","./src/css.modules.d.ts","./src/footer/footer.tsx","./src/footer/index.ts","./src/header/header.tsx","./src/header/index.ts","./src/main/main.test.tsx","./src/main/main.tsx","./src/main/index.ts","./test/vitest-setup.ts"],"version":"5.6.3"}
