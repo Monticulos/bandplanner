@@ -1,9 +1,9 @@
 ﻿import React, { ReactElement } from "react";
-import classes from "./Main.module.css";
+import classes from "./MainContent.module.css";
 
-export const Main = (): ReactElement => {
+export const MainContent = (): ReactElement => {
   return (
-    <main className={classes.main}>
+    <main className={classes.mainContent}>
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
