@@ -16,5 +16,6 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "jsx": "react",
+    "types": ["@digdir/designsystemet-theme/colors.d.ts"]
   }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MemberListViewer } from "./MemberListViewer";
-import { Card } from "../../Components";
 import classes from "./Planner.module.css";
+import { TimeTable } from "./TimeTable";
 
 export type MemberListItem = {
   name: string;
@@ -15,9 +15,7 @@ export const Planner = () => {
 
   return (
     <div className={classes.planner}>
-      <Card heading="Time table">
-        <p>Table</p>
-      </Card>
+      <TimeTable />
       <MemberListViewer memberList={memberList} setMemberList={setMemberList} />
     </div>
   );

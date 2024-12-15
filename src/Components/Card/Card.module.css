@@ -1,8 +1,0 @@
-.card {
-  padding: var(--padding);
-  background-color: lightblue;
-  color: black;
-  border-radius: 0.25rem;
-  border: black;
-  height: fit-content;
-}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import classes from "./MemberListViewer.module.css";
 import type { MemberList, MemberListItem } from "../Planner";
-import { Card } from "../../../Components/Card";
+import { Button, Card, Heading, Textfield } from "@digdir/designsystemet-react";
 
 type MemberListProps = {
   memberList: MemberList;
@@ -29,24 +30,24 @@ export const MemberListViewer = ({
 
   return (
     <>
-      <Card heading="Band members">
-        <>
-          <form onSubmit={handleAddMember}>
-            <input
-              type="text"
-              value={newMember}
-              onChange={(e) => setNewMember(e.target.value)}
-            />
-            <button type="submit">Add Member</button>
-          </form>
-          <ul>
-            {memberList.map((member, index) => (
-              <li key={index}>
-                {member.name} | {member.priority}
-              </li>
-            ))}
-          </ul>
-        </>
+      <Card>
+        <Heading level={2}>Band members</Heading>
+        <form onSubmit={handleAddMember} className={classes.form}>
+          <Textfield
+            type="text"
+            value={newMember}
+            onChange={(e) => setNewMember(e.target.value)}
+            label={"Name"}
+          />
+          <Button type="submit">Add Member</Button>
+        </form>
+        <ul>
+          {memberList.map((member, index) => (
+            <li key={index}>
+              {member.name} | {member.priority}
+            </li>
+          ))}
+        </ul>
       </Card>
     </>
   );
