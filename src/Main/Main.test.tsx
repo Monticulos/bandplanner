@@ -1,11 +1,9 @@
-﻿import "@testing-library/jest-dom";
-import { Main } from "./Main.tsx";
-import { render, screen } from "@testing-library/react";
-import { it, expect } from "vitest";
+﻿import { Main } from "./Main.tsx";
 import React from "react";
+import { render, screen } from "@testing-library/react";
 
 it("should render", () => {
   render(<Main />);
   const headings = screen.getAllByRole("heading");
-  expect(headings[0]).toBeInTheDocument;
+  expect(headings[0]).toBeInTheDocument();
 });
