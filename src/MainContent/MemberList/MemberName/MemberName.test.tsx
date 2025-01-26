@@ -1,14 +1,14 @@
 ﻿import React from "react";
-import { MemberButton } from "./MemberButton.tsx";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { vi } from "vitest";
+import { MemberName } from "./MemberName.tsx";
 
 const defaultProps = { name: "Ola Nordstoga", onClick: vi.fn() };
 
-describe("MemberButton", () => {
+describe("MemberName", () => {
   it("should display name of band member", () => {
-    render(<MemberButton {...defaultProps} />);
+    render(<MemberName {...defaultProps} />);
     const button = screen.getByRole("button", { name: defaultProps.name });
     expect(button).toBeInTheDocument();
   });
@@ -16,7 +16,7 @@ describe("MemberButton", () => {
   it("should call click handler when clicked", async () => {
     const user = userEvent.setup();
     const handleClickMock = vi.fn();
-    render(<MemberButton {...defaultProps} onClick={handleClickMock} />);
+    render(<MemberName {...defaultProps} onClick={handleClickMock} />);
 
     const button = screen.getByRole("button", { name: defaultProps.name });
     await user.click(button);
