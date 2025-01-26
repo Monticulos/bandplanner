@@ -1,4 +1,4 @@
-﻿import React, { FormEvent, ReactElement, useState } from "react";
+import React, { FormEvent, ReactElement, useState } from "react";
 import classes from "./MemberList.module.css";
 import { Member } from "../../../types/Member.ts";
 import { MemberDetails } from "./MemberDetails/MemberDetails.tsx";
