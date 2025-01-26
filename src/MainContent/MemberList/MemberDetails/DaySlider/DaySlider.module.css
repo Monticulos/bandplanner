@@ -1,5 +1,4 @@
 ﻿.helpTextBox {
-    color: black;
     text-align: center;
 }
 
@@ -9,23 +8,23 @@
     gap: var(--gap-small);
 }
 
-.redBackground {
-    background-color: #ff0000
+.red {
+    color: #ff0000
 }
 
-.orangeBackground {
-    background-color: #ffa700
+.orange {
+    color: #ffa700
 }
 
-.yellowBackground {
-    background-color: #fff400
+.yellow {
+    color: #fff400
 }
 
-.lightGreenBackground {
-    background-color: #a3ff00
+.lightGreen {
+    color: #a3ff00
 }
 
-.strongGreenBackground {
-    background-color: #2cba00
+.strongGreen {
+    color: #2cba00
 }
 

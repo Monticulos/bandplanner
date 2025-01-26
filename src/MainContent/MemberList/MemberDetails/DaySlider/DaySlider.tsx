@@ -1,11 +1,13 @@
 ﻿import classes from "./DaySlider.module.css";
 import React, { ChangeEvent, ReactElement, useState } from "react";
+import { getColorClass } from "../../../../utils/utils.ts";
+import { SliderValue } from "../../../../../types/SliderValue.ts";
 
 export const DaySlider = ({ weekday }): ReactElement => {
-  const [sliderValue, setSliderValue] = useState<string>("50");
+  const [sliderValue, setSliderValue] = useState<number>(50);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSliderValue(event.target.value);
+    setSliderValue(Number(event.target.value));
   };
 
   return (
@@ -20,15 +22,14 @@ export const DaySlider = ({ weekday }): ReactElement => {
         defaultValue={sliderValue}
         onChange={handleChange}
       />
-      <HelpTextBox sliderValue={sliderValue} />
+      <HelpText sliderValue={sliderValue} />
     </div>
   );
 };
 
-const HelpTextBox = ({ sliderValue }): ReactElement => {
+const HelpText = ({ sliderValue }): ReactElement => {
   const helpText = getSliderHelpText(sliderValue);
-  const boxColorClass = getSliderColorClass(sliderValue);
-
+  const boxColorClass = getColorClass(sliderValue);
   const className = `${classes.helpTextBox} ${classes[boxColorClass]}`;
 
   return (
@@ -38,34 +39,17 @@ const HelpTextBox = ({ sliderValue }): ReactElement => {
   );
 };
 
-type SliderValue = "0" | "25" | "50" | "75" | "100";
-
 const getSliderHelpText = (sliderValue: SliderValue): string => {
   switch (sliderValue) {
-    case "0":
+    case 0:
       return "I can't attend";
-    case "25":
+    case 25:
       return "I may not come";
-    case "50":
+    case 50:
       return "Fits OK";
-    case "75":
+    case 75:
       return "Fits well";
-    case "100":
+    case 100:
       return "Fits perfectly";
-  }
-};
-
-const getSliderColorClass = (sliderValue: SliderValue): string => {
-  switch (sliderValue) {
-    case "0":
-      return "redBackground";
-    case "25":
-      return "orangeBackground";
-    case "50":
-      return "yellowBackground";
-    case "75":
-      return "lightGreenBackground";
-    case "100":
-      return "strongGreenBackground";
   }
 };

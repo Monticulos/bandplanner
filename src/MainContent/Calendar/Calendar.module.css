@@ -6,6 +6,10 @@
 }
 
 .calendarDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-small);
     border-radius: var(--border-radius);
     border: var(--border);
     padding: var(--padding-standard);
@@ -14,4 +18,30 @@
 
 .dayHeading {
     text-align: center;
+}
+
+.weight {
+    color: black;
+    font-weight: bold;
+    padding: var(--gap-small);
+}
+
+.red {
+    color: #ff0000
+}
+
+.orange {
+    color: #ffa700
+}
+
+.yellow {
+    color: #fff400
+}
+
+.lightGreen {
+    color: #a3ff00
+}
+
+.strongGreen {
+    color: #2cba00
 }
