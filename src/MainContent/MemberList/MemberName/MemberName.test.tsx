@@ -2,9 +2,13 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { vi } from "vitest";
-import { MemberName } from "./MemberName.tsx";
+import { MemberName, MemberNameProps } from "./MemberName.tsx";
 
-const defaultProps = { name: "Ola Nordstoga", onClick: vi.fn() };
+const defaultProps: MemberNameProps = {
+  name: "Ola Nordstoga",
+  onClick: vi.fn(),
+  disabled: false,
+};
 
 describe("MemberName", () => {
   it("should display name of band member", () => {

@@ -1,22 +1,22 @@
 ﻿import React, { ReactElement } from "react";
 import classes from "./MemberName.module.css";
 
-type MemberNameProps = {
+export type MemberNameProps = {
   name: string;
   onClick: () => void;
-  isPressed: boolean;
+  disabled: boolean;
 };
 
 export const MemberName = ({
   name,
   onClick: handleClick,
-  isPressed,
+  disabled,
 }: MemberNameProps): ReactElement => {
   return (
     <button
       className={classes.memberButton}
       onClick={() => handleClick()}
-      disabled={isPressed}
+      disabled={disabled}
     >
       {name}
     </button>

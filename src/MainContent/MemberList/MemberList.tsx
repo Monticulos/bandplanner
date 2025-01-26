@@ -37,7 +37,7 @@ export const Member = ({ member }: MemberProps): ReactElement => {
       <MemberName
         name={member.name}
         onClick={() => setShouldShowDetails(true)}
-        isPressed={shouldShowDetails}
+        disabled={shouldShowDetails}
       />
       {shouldShowDetails && (
         <MemberDetails

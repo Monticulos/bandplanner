@@ -19,7 +19,7 @@ export const MemberDetails = ({
         {weekdays.map((weekday) => (
           <div key={weekday} className={classes.formField}>
             <label htmlFor={weekday}>{weekday}</label>
-            <input name={weekday} />
+            <input id={weekday} />
           </div>
         ))}
         <button type="submit" className={classes.submitButton}>
