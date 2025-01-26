@@ -1,17 +1,51 @@
-﻿import React, { ReactElement } from "react";
+import React, { FormEvent, ReactElement, useState } from "react";
 import classes from "./MemberList.module.css";
-import { MemberButton } from "./MemberButton/MemberButton.tsx";
+import { Member } from "../../../types/Member.ts";
+import { MemberDetails } from "./MemberDetails/MemberDetails.tsx";
+import { MemberName } from "./MemberName/MemberName.tsx";
 
-export const MemberList = (): ReactElement => {
-  const handleClickMember = (name: string): void => {
-    alert(`${name} was clicked`);
+type MemberListProps = {
+  memberData: Member[];
+};
+
+export const MemberList = ({ memberData }: MemberListProps): ReactElement => {
+  return (
+    <div className={classes.container}>
+      {memberData.map((member) => (
+        <div key={member.name}>
+          <Member member={member} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+type MemberProps = {
+  member: Member;
+};
+
+export const Member = ({ member }: MemberProps): ReactElement => {
+  const [shouldShowDetails, setShouldShowDetails] = useState<boolean>(false);
+
+  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setShouldShowDetails(false);
   };
 
   return (
-    <div className={classes.container}>
-      <MemberButton name={"John Doe"} onClick={handleClickMember} />
-      <MemberButton name={"Sallie Ann"} onClick={handleClickMember} />
-      <MemberButton name={"Ola Nordmann"} onClick={handleClickMember} />
+    <div className={classes.member}>
+      <MemberName
+        name={member.name}
+        onClick={() => setShouldShowDetails(true)}
+        disabled={shouldShowDetails}
+      />
+      {shouldShowDetails && (
+        <MemberDetails
+          member={member}
+          onSubmit={handleFormSubmit}
+          onCancel={() => setShouldShowDetails(false)}
+        />
+      )}
     </div>
   );
 };
