@@ -1,6 +1,6 @@
 ﻿export type DayWeight = {
   weight: number;
-  description?: string;
+  descriptions?: string[];
 };
 
 export type DayWeights = {

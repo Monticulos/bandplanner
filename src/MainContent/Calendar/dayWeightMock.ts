@@ -6,7 +6,10 @@ export const dayWeightMock: DayWeights = {
   wednesday: { weight: 40 },
   thursday: {
     weight: 5,
-    description: "Ola Nordmann is not available this day.",
+    descriptions: [
+      "Ola Nordmann is not available this day.",
+      "Sallie Ann is not available this day.",
+    ],
   },
   friday: { weight: 70 },
   saturday: { weight: 20 },
