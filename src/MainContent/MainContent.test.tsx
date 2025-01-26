@@ -4,6 +4,6 @@ import { render, screen } from "@testing-library/react";
 
 it("should render", () => {
   render(<MainContent />);
-  const headings = screen.getAllByRole("heading");
-  expect(headings[0]).toBeInTheDocument();
+  const memberName = screen.getByText("John Doe");
+  expect(memberName).toBeInTheDocument();
 });
