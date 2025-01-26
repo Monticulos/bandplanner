@@ -11,7 +11,7 @@ export const Calendar = (): ReactElement => {
         <CalendarDay
           weekday={weekday}
           weight={dayWeightMock[weekday.toLowerCase()].weight}
-          description={dayWeightMock[weekday.toLowerCase()]?.description}
+          descriptions={dayWeightMock[weekday.toLowerCase()]?.descriptions}
         />
       ))}
     </div>
@@ -21,24 +21,30 @@ export const Calendar = (): ReactElement => {
 type CalendarDayProps = {
   weekday: string;
   weight: number;
-  description?: string;
+  descriptions?: string[];
 };
 
 const CalendarDay = ({
   weekday,
   weight,
-  description,
+  descriptions,
 }: CalendarDayProps): ReactElement => {
   return (
     <div className={classes.calendarDay}>
-      <h3 className={classes.dayHeading}>{weekday}</h3>
-      <Weight weight={weight} />
-      {description && <p>{description}</p>}
+      <div className={classes.headingWithWeight}>
+        <h3>{weekday}</h3>
+        <Weight weight={weight} />
+      </div>
+      {descriptions && <DescriptionList descriptions={descriptions} />}
     </div>
   );
 };
 
-const Weight = ({ weight }) => {
+type WeightProps = {
+  weight: number;
+};
+
+const Weight = ({ weight }: WeightProps) => {
   const weightAsSliderValue = placeWeightInBracket(weight);
   const colorClass = getColorClass(weightAsSliderValue);
 
@@ -51,3 +57,17 @@ const Weight = ({ weight }) => {
     </p>
   );
 };
+
+type DescriptionListProps = {
+  descriptions: string[];
+};
+
+const DescriptionList = ({
+  descriptions,
+}: DescriptionListProps): ReactElement => (
+  <ul className={classes.descriptionList}>
+    {descriptions.map((description) => (
+      <li>{description}</li>
+    ))}
+  </ul>
+);
