@@ -1,0 +1,31 @@
+﻿.helpTextBox {
+    color: black;
+    text-align: center;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-small);
+}
+
+.redBackground {
+    background-color: #ff0000
+}
+
+.orangeBackground {
+    background-color: #ffa700
+}
+
+.yellowBackground {
+    background-color: #fff400
+}
+
+.lightGreenBackground {
+    background-color: #a3ff00
+}
+
+.strongGreenBackground {
+    background-color: #2cba00
+}
+

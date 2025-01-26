@@ -2,6 +2,7 @@
 import classes from "./MemberDetails.module.css";
 import { weekdays } from "../../../../constants/constants.ts";
 import { Member } from "../MemberList.tsx";
+import { DaySlider } from "./DaySlider/DaySlider.tsx";
 
 type MemberDetailsProps = {
   member: Member;
@@ -17,10 +18,7 @@ export const MemberDetails = ({
     <>
       <form onSubmit={handleSubmit} className={classes.memberForm}>
         {weekdays.map((weekday) => (
-          <div key={weekday} className={classes.formField}>
-            <label htmlFor={weekday}>{weekday}</label>
-            <input id={weekday} />
-          </div>
+          <DaySlider weekday={weekday} />
         ))}
         <button type="submit" className={classes.submitButton}>
           Submit

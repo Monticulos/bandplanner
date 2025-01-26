@@ -4,11 +4,6 @@
     gap: var(--gap);
 }
 
-.formField {
-    display: flex;
-    flex-direction: column;
-}
-
 .submitButton {
     padding: var(--padding-button);
 }
