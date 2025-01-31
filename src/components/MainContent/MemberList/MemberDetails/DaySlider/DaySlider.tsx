@@ -1,9 +1,13 @@
 ﻿import classes from "./DaySlider.module.css";
 import React, { ChangeEvent, ReactElement, useState } from "react";
-import { getColorClass } from "../../../../utils/utils.ts";
+import { getColorClass } from "../../../../../utils/utils.ts";
 import { SliderValue } from "../../../../../types/SliderValue.ts";
 
-export const DaySlider = ({ weekday }): ReactElement => {
+type DaySliderProps = {
+  weekday: string;
+};
+
+export const DaySlider = ({ weekday }: DaySliderProps): ReactElement => {
   const [sliderValue, setSliderValue] = useState<number>(50);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -22,12 +26,16 @@ export const DaySlider = ({ weekday }): ReactElement => {
         defaultValue={sliderValue}
         onChange={handleChange}
       />
-      <HelpText sliderValue={sliderValue} />
+      <HelpText sliderValue={sliderValue as SliderValue} />
     </div>
   );
 };
 
-const HelpText = ({ sliderValue }): ReactElement => {
+type HelpTextProps = {
+  sliderValue: SliderValue;
+};
+
+const HelpText = ({ sliderValue }: HelpTextProps): ReactElement => {
   const helpText = getSliderHelpText(sliderValue);
   const boxColorClass = getColorClass(sliderValue);
   const className = `${classes.helpTextBox} ${classes[boxColorClass]}`;

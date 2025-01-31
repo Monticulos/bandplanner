@@ -1,4 +1,4 @@
-﻿import { SliderValue } from "../../types/SliderValue.ts";
+﻿import { SliderValue } from "../types/SliderValue.ts";
 
 export const getColorClass = (sliderValue: SliderValue): string => {
   switch (sliderValue) {
@@ -20,5 +20,5 @@ export const placeWeightInBracket = (weight: number): SliderValue => {
   if (weight < 37) return 25;
   if (weight < 62) return 50;
   if (weight < 87) return 75;
-  if (weight >= 87) return 100;
+  else return 100;
 };

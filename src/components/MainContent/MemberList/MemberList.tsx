@@ -1,8 +1,8 @@
 import React, { FormEvent, ReactElement, useState } from "react";
 import classes from "./MemberList.module.css";
-import { Member } from "../../../types/Member.ts";
 import { MemberDetails } from "./MemberDetails/MemberDetails.tsx";
 import { MemberName } from "./MemberName/MemberName.tsx";
+import type { Member } from "../../../types/Member.ts";
 
 type MemberListProps = {
   memberData: Member[];
