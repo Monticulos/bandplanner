@@ -1,8 +1,8 @@
 ﻿import React, { FormEvent, ReactElement } from "react";
 import classes from "./MemberDetails.module.css";
 import { weekdays } from "../../../../constants/constants.ts";
-import { Member } from "../MemberList.tsx";
 import { DaySlider } from "./DaySlider/DaySlider.tsx";
+import { Member } from "../../../../types/Member.ts";
 
 type MemberDetailsProps = {
   member: Member;

@@ -2,7 +2,7 @@
 import classes from "./Calendar.module.css";
 import { weekdays } from "../../../constants/constants.ts";
 import { dayWeightMock } from "./dayWeightMock.ts";
-import { getColorClass, placeWeightInBracket } from "../../utils/utils.ts";
+import { getColorClass, placeWeightInBracket } from "../../../utils/utils.ts";
 
 export const Calendar = (): ReactElement => {
   return (
