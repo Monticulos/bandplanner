@@ -4,12 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "test": "vitest",
-    "typecheck": "tsc"
+    "dev": "vite --config ./frontend/config/vite.config.ts",
+    "build": "tsc --build ./frontend/config/tsconfig.json && vite build --config ./frontend/config/vite.config.ts",
+    "lint": "eslint --config ./frontend/config/eslint.config.js",
+    "preview": "vite preview --config ./frontend/config/vite.config.ts",
+    "test": "vitest --config ./frontend/config/vitest.config.js",
+    "typecheck": "tsc --project ./frontend/config/tsconfig.json",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -30,7 +34,9 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.14.0",
+    "husky": "^9.1.7",
     "jsdom": "^26.0.0",
+    "lint-staged": "^15.4.3",
     "prettier": "3.4.2",
     "typescript": "~5.7.3",
     "typescript-eslint": "^8.22.0",
