@@ -29,7 +29,7 @@ const Member = ({ member }: MemberProps): ReactElement => {
   };
 
   return (
-    <div className={classes.member}>
+    <div>
       <MemberNameButton name={member.name} onClick={() => onMemberClick()} />
       <MemberDialog member={member} modalRef={modalRef} />
     </div>

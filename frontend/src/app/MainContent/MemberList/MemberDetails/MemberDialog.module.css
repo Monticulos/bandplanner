@@ -16,5 +16,5 @@
 }
 
 .button {
-  padding: var(--padding-button);
+  padding: var(--spacing-small);
 }
