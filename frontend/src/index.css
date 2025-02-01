@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   --accent-color: #e67d1c;
   --background-color: #1e2b3c;
@@ -13,7 +17,7 @@ body {
   --gap-small: 0.25rem;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  height: 100vh;
+  height: 100%;
   color: var(--text-color);
 }
 

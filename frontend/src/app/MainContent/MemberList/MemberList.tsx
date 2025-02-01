@@ -7,7 +7,7 @@ import { memberMockData } from "./testData/members";
 
 export const MemberList = (): ReactElement => {
   return (
-    <div className={classes.container}>
+    <div className={classes.memberListContainer}>
       {memberMockData.map((member) => (
         <div key={member.name}>
           <Member member={member} />

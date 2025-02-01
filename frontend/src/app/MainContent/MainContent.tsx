@@ -6,8 +6,8 @@ import { Calendar } from "./Calendar/Calendar.tsx";
 export const MainContent = (): ReactElement => {
   return (
     <main className={classes.mainContent}>
-      <MemberList />
       <Calendar />
+      <MemberList />
     </main>
   );
 };
