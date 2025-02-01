@@ -2,6 +2,7 @@
 import React, { ChangeEvent, ReactElement, useState } from "react";
 import { getColorClass } from "../../../../../utils/utils.ts";
 import { SliderValue } from "../../../../../types/SliderValue.ts";
+import { StringUtils } from "../../../../../utils/StringUtils.ts";
 
 type DaySliderProps = {
   weekday: string;
@@ -9,6 +10,7 @@ type DaySliderProps = {
 
 export const DaySlider = ({ weekday }: DaySliderProps): ReactElement => {
   const [sliderValue, setSliderValue] = useState<number>(50);
+  const weekdayUpperFirst = StringUtils.toFirstUpper(weekday);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSliderValue(Number(event.target.value));
@@ -16,7 +18,7 @@ export const DaySlider = ({ weekday }: DaySliderProps): ReactElement => {
 
   return (
     <div key={weekday} className={classes.formField}>
-      <label htmlFor={weekday}>{weekday}</label>
+      <label htmlFor={weekday}>{weekdayUpperFirst}</label>
       <input
         type="range"
         id={weekday}

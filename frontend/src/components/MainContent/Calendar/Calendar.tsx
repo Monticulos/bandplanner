@@ -3,15 +3,20 @@ import classes from "./Calendar.module.css";
 import { weekdays } from "../../../constants/constants.ts";
 import { dayWeightMock } from "./dayWeightMock.ts";
 import { getColorClass, placeWeightInBracket } from "../../../utils/utils.ts";
+import { StringUtils } from "../../../utils/StringUtils.ts";
+import { DayWeights } from "../../../types/DayWeights.ts";
 
 export const Calendar = (): ReactElement => {
   return (
     <div className={classes.calendar}>
       {weekdays.map((weekday) => (
         <CalendarDay
+          key={weekday}
           weekday={weekday}
-          weight={dayWeightMock[weekday.toLowerCase()].weight}
-          descriptions={dayWeightMock[weekday.toLowerCase()]?.descriptions}
+          weight={dayWeightMock[weekday as keyof DayWeights].weight}
+          descriptions={
+            dayWeightMock[weekday as keyof DayWeights]?.descriptions
+          }
         />
       ))}
     </div>
@@ -19,6 +24,7 @@ export const Calendar = (): ReactElement => {
 };
 
 type CalendarDayProps = {
+  key: string;
   weekday: string;
   weight: number;
   descriptions?: string[];
@@ -29,10 +35,12 @@ const CalendarDay = ({
   weight,
   descriptions,
 }: CalendarDayProps): ReactElement => {
+  const weekdayHeading = StringUtils.toFirstUpper(weekday);
+
   return (
     <div className={classes.calendarDay}>
       <div className={classes.headingWithWeight}>
-        <h3>{weekday}</h3>
+        <h3>{weekdayHeading}</h3>
         <Weight weight={weight} />
       </div>
       {descriptions && <DescriptionList descriptions={descriptions} />}
@@ -66,8 +74,8 @@ const DescriptionList = ({
   descriptions,
 }: DescriptionListProps): ReactElement => (
   <ul className={classes.descriptionList}>
-    {descriptions.map((description) => (
-      <li>{description}</li>
+    {descriptions.map((description, key) => (
+      <li key={key}>{description}</li>
     ))}
   </ul>
 );
