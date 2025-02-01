@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "test": "vitest",
-    "typecheck": "tsc"
+    "dev": "vite --config ./frontend/vite.config.ts",
+    "build": "tsc --build ./frontend/tsconfig.json && vite build --config ./frontend/vite.config.ts",
+    "lint": "eslint --config ./frontend/eslint.config.js",
+    "preview": "vite preview --config ./frontend/vite.config.ts",
+    "test": "vitest --config ./frontend/vitest.config.js",
+    "typecheck": "tsc --project ./frontend/tsconfig.json"
   },
   "dependencies": {
     "react": "^19.0.0",

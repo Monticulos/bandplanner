@@ -1,9 +1,10 @@
 ﻿import { defineConfig } from "vitest/config";
+import path from "path";
 
 export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: "./frontend/test/vitest-setup.ts",
+    setupFiles: path.resolve(__dirname, "./test/vitest-setup.ts"),
   },
 });
