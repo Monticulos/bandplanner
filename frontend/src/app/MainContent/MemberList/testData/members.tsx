@@ -12,4 +12,4 @@ const member3: Member = {
   name: "Elizabeth Swan",
 };
 
-export const memberList: Member[] = [member1, member2, member3];
+export const memberMockData: Member[] = [member1, member2, member3];

@@ -1,9 +1,18 @@
 ﻿import { MainContent } from "./MainContent.tsx";
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import {
+  render,
+  screen,
+  waitFor,
+  waitForElementToBeRemoved,
+} from "@testing-library/react";
+import { memberMockData } from "./MemberList/testData/members";
 
-it("should render", () => {
-  render(<MainContent />);
-  const memberName = screen.getByText("John Doe");
-  expect(memberName).toBeInTheDocument();
+describe("MainContent", () => {
+  it("should render member section", () => {
+    render(<MainContent />);
+    const name = memberMockData[0].name;
+    const memberNameButton = screen.getByRole("button", { name });
+    expect(memberNameButton).toBeInTheDocument();
+  });
 });
