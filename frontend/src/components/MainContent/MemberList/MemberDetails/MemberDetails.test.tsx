@@ -5,6 +5,7 @@ import { member1 } from "../testData/members.tsx";
 import { vi } from "vitest";
 import { weekdays } from "../../../../constants/constants.ts";
 import userEvent from "@testing-library/user-event";
+import { StringUtils } from "../../../../utils/StringUtils.ts";
 
 const defaultProps = {
   member: member1,
@@ -17,7 +18,8 @@ describe("MemberDetails", () => {
     render(<MemberDetails {...defaultProps} />);
 
     weekdays.forEach((weekday) => {
-      const weekdayLabel = screen.getByLabelText(weekday);
+      const weekdayLabelText = StringUtils.toFirstUpper(weekday);
+      const weekdayLabel = screen.getByLabelText(weekdayLabelText);
       expect(weekdayLabel).toBeInTheDocument();
     });
   });

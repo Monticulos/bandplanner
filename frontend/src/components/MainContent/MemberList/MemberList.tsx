@@ -24,7 +24,7 @@ type MemberProps = {
   member: Member;
 };
 
-export const Member = ({ member }: MemberProps): ReactElement => {
+const Member = ({ member }: MemberProps): ReactElement => {
   const [shouldShowDetails, setShouldShowDetails] = useState<boolean>(false);
 
   const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
