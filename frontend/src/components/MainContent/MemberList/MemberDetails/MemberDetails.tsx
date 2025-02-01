@@ -18,7 +18,7 @@ export const MemberDetails = ({
     <>
       <form onSubmit={handleSubmit} className={classes.memberForm}>
         {weekdays.map((weekday) => (
-          <DaySlider weekday={weekday} />
+          <DaySlider key={weekday} weekday={weekday} />
         ))}
         <button type="submit" className={classes.submitButton}>
           Submit

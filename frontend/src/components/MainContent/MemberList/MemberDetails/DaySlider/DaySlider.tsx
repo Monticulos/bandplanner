@@ -5,6 +5,7 @@ import { SliderValue } from "../../../../../types/SliderValue.ts";
 import { StringUtils } from "../../../../../utils/StringUtils.ts";
 
 type DaySliderProps = {
+  key: string;
   weekday: string;
 };
 
