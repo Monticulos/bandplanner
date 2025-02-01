@@ -7,7 +7,7 @@
 }
 
 .calendarDay {
-  background: var(--background-color);
+  background: var(--background-color-panel);
   display: flex;
   flex-direction: column;
   gap: var(--gap);
