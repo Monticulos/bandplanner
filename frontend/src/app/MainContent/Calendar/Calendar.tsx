@@ -1,24 +1,27 @@
 ﻿import React, { ReactElement } from "react";
 import classes from "./Calendar.module.css";
 import { weekdays } from "../../../constants/constants.ts";
-import { dayWeightMock } from "./dayWeightMock.ts";
 import { getColorClass, placeWeightInBracket } from "../../../utils/utils.ts";
 import { StringUtils } from "../../../utils/StringUtils.ts";
 import { DayWeights } from "../../../types/DayWeights.ts";
+import { UseMockGetCalendarData } from "../../../hooks/useMockGetCalendarData";
 
 export const Calendar = (): ReactElement => {
+  const { data, isLoading, error } = UseMockGetCalendarData();
+
   return (
     <div className={classes.calendar}>
-      {weekdays.map((weekday) => (
-        <CalendarDay
-          key={weekday}
-          weekday={weekday}
-          weight={dayWeightMock[weekday as keyof DayWeights].weight}
-          descriptions={
-            dayWeightMock[weekday as keyof DayWeights]?.descriptions
-          }
-        />
-      ))}
+      {error && <span>{error}</span>}
+      {isLoading && <span>Loading...</span>}
+      {data &&
+        weekdays.map((weekday) => (
+          <CalendarDay
+            key={weekday}
+            weekday={weekday}
+            weight={data[weekday as keyof DayWeights].weight}
+            descriptions={data[weekday as keyof DayWeights]?.descriptions}
+          />
+        ))}
     </div>
   );
 };
@@ -35,12 +38,12 @@ const CalendarDay = ({
   weight,
   descriptions,
 }: CalendarDayProps): ReactElement => {
-  const weekdayHeading = StringUtils.toFirstUpper(weekday);
+  const weekdayHeadingText = StringUtils.toFirstUpper(weekday);
 
   return (
     <div className={classes.calendarDay}>
       <div className={classes.headingWithWeight}>
-        <h3>{weekdayHeading}</h3>
+        <h3>{weekdayHeadingText}</h3>
         <Weight weight={weight} />
       </div>
       {descriptions && <DescriptionList descriptions={descriptions} />}
