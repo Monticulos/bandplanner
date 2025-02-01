@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import { MemberDetails } from "./MemberDetails.tsx";
+import { MemberDetails } from "./MemberDialog.tsx";
 import { render, screen } from "@testing-library/react";
 import { member1 } from "../testData/members.tsx";
 import { vi } from "vitest";

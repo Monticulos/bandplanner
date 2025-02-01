@@ -1,17 +1,14 @@
-import React, { FormEvent, ReactElement, useState } from "react";
+import React, { ReactElement, useRef } from "react";
 import classes from "./MemberList.module.css";
-import { MemberDetails } from "./MemberDetails/MemberDetails.tsx";
-import { MemberName } from "./MemberName/MemberName.tsx";
+import { MemberNameButton } from "./MemberName/MemberNameButton.tsx";
 import type { Member } from "../../../types/Member.ts";
+import { MemberDialog } from "./MemberDetails/MemberDialog";
+import { memberMockData } from "./testData/members";
 
-type MemberListProps = {
-  memberData: Member[];
-};
-
-export const MemberList = ({ memberData }: MemberListProps): ReactElement => {
+export const MemberList = (): ReactElement => {
   return (
     <div className={classes.container}>
-      {memberData.map((member) => (
+      {memberMockData.map((member) => (
         <div key={member.name}>
           <Member member={member} />
         </div>
@@ -25,27 +22,16 @@ type MemberProps = {
 };
 
 const Member = ({ member }: MemberProps): ReactElement => {
-  const [shouldShowDetails, setShouldShowDetails] = useState<boolean>(false);
+  const modalRef = useRef<HTMLDialogElement>(null);
 
-  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setShouldShowDetails(false);
+  const onMemberClick = () => {
+    modalRef.current.showModal();
   };
 
   return (
     <div className={classes.member}>
-      <MemberName
-        name={member.name}
-        onClick={() => setShouldShowDetails(true)}
-        disabled={shouldShowDetails}
-      />
-      {shouldShowDetails && (
-        <MemberDetails
-          member={member}
-          onSubmit={handleFormSubmit}
-          onCancel={() => setShouldShowDetails(false)}
-        />
-      )}
+      <MemberNameButton name={member.name} onClick={() => onMemberClick()} />
+      <MemberDialog member={member} modalRef={modalRef} />
     </div>
   );
 };
