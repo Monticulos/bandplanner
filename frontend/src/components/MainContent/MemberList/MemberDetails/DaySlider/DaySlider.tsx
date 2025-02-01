@@ -10,7 +10,7 @@ type DaySliderProps = {
 
 export const DaySlider = ({ weekday }: DaySliderProps): ReactElement => {
   const [sliderValue, setSliderValue] = useState<number>(50);
-  const weekdayUpperFirst = StringUtils.toFirstUpper(weekday);
+  const weekdayLabelText = StringUtils.toFirstUpper(weekday);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSliderValue(Number(event.target.value));
@@ -18,7 +18,7 @@ export const DaySlider = ({ weekday }: DaySliderProps): ReactElement => {
 
   return (
     <div key={weekday} className={classes.formField}>
-      <label htmlFor={weekday}>{weekdayUpperFirst}</label>
+      <label htmlFor={weekday}>{weekdayLabelText}</label>
       <input
         type="range"
         id={weekday}
