@@ -1,7 +1,7 @@
 ﻿.footer {
   background: var(--background-color);
-  border-top: var(--border);
-  padding: var(--spacing-large);
+  padding-inline: var(--spacing-large);
+  padding-bottom: var(--spacing-large);
   display: flex;
   justify-content: center;
 }

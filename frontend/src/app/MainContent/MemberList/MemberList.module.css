@@ -1,7 +1,7 @@
 .memberListContainer {
   display: flex;
   flex-direction: column;
-  background: var(--background-color);
+  background: var(--background-color-panel);
   border-radius: var(--border-radius);
   border: var(--border);
   padding: var(--spacing-large);
