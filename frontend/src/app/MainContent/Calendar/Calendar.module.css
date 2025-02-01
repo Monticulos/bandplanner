@@ -1,0 +1,53 @@
+﻿.calendar {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--padding-standard);
+  height: 100%;
+}
+
+.calendarDay {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  border-radius: var(--border-radius);
+  border: var(--border);
+  padding: var(--padding-standard);
+  width: 100%;
+}
+
+.headingWithWeight {
+  text-align: center;
+}
+
+.weight {
+  color: black;
+  font-weight: bold;
+  padding: var(--gap-small);
+}
+
+.descriptionList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding-left: var(--gap);
+}
+
+.red {
+  color: #ff0000;
+}
+
+.orange {
+  color: #ffa700;
+}
+
+.yellow {
+  color: #fff400;
+}
+
+.lightGreen {
+  color: #a3ff00;
+}
+
+.strongGreen {
+  color: #2cba00;
+}

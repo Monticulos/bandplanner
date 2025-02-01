@@ -1,9 +1,0 @@
-﻿.memberButton {
-    padding: var(--padding-button);
-    width: 100%;
-}
-
-.memberButton:disabled {
-    color: #222; /* Slightly brighter than black. Visible, but matches the disabled style */
-    font-weight: bold;
-}
