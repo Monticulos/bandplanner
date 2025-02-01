@@ -22,3 +22,13 @@ export const placeWeightInBracket = (weight: number): SliderValue => {
   if (weight < 87) return 75;
   else return 100;
 };
+
+// Inputting 3 will return 1, 2 or 3.
+function getRandomInt(max: number): number {
+  return Math.floor(Math.random() * max + 1);
+}
+
+export function produceRandomTrueBetweenOneAndN(n: number): boolean {
+  const randomInt = getRandomInt(n);
+  return randomInt === 1;
+}
