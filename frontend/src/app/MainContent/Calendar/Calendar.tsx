@@ -42,10 +42,8 @@ const CalendarDay = ({
 
   return (
     <div className={classes.calendarDay}>
-      <div className={classes.headingWithWeight}>
-        <h3>{weekdayHeadingText}</h3>
-        <Weight weight={weight} />
-      </div>
+      <h3>{weekdayHeadingText}</h3>
+      <Weight weight={weight} />
       {descriptions && <DescriptionList descriptions={descriptions} />}
     </div>
   );
