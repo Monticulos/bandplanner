@@ -1,22 +1,20 @@
 ﻿.calendar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: var(--padding-standard);
-  height: 100%;
+  gap: var(--spacing-large);
+  width: 100%;
 }
 
 .calendarDay {
+  background: var(--background-color);
   display: flex;
   flex-direction: column;
   gap: var(--gap);
   border-radius: var(--border-radius);
   border: var(--border);
-  padding: var(--padding-standard);
-  width: 100%;
-}
-
-.headingWithWeight {
-  text-align: center;
+  padding: var(--spacing-standard);
+  height: 100%;
 }
 
 .weight {

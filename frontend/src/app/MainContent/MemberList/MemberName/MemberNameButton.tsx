@@ -1,5 +1,5 @@
 ﻿import React, { ReactElement } from "react";
-import classes from "./MemberName.module.css";
+import classes from "./MemberNameButton.module.css";
 
 export type MemberNameButtonProps = {
   name: string;

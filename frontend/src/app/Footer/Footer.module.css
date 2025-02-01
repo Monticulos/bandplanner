@@ -1,7 +1,7 @@
 ﻿.footer {
   background: var(--background-color);
   border-top: var(--border);
-  padding: var(--padding-standard);
+  padding: var(--spacing-large);
   display: flex;
   justify-content: center;
 }

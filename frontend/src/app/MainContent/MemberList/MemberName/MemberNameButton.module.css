@@ -1,0 +1,4 @@
+﻿.memberButton {
+  padding: var(--spacing-standard);
+  min-width: 10rem;
+}

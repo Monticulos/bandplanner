@@ -12,7 +12,7 @@ const defaultProps: MemberNameButtonProps = {
   onClick: vi.fn(),
 };
 
-describe("MemberName", () => {
+describe("MemberNameButton", () => {
   it("should display name of band member", () => {
     render(<MemberNameButton {...defaultProps} />);
     const button = screen.getByRole("button", { name: defaultProps.name });

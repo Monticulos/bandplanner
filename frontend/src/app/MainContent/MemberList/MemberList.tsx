@@ -7,7 +7,7 @@ import { memberMockData } from "./testData/members";
 
 export const MemberList = (): ReactElement => {
   return (
-    <div className={classes.container}>
+    <div className={classes.memberListContainer}>
       {memberMockData.map((member) => (
         <div key={member.name}>
           <Member member={member} />
@@ -29,7 +29,7 @@ const Member = ({ member }: MemberProps): ReactElement => {
   };
 
   return (
-    <div className={classes.member}>
+    <div>
       <MemberNameButton name={member.name} onClick={() => onMemberClick()} />
       <MemberDialog member={member} modalRef={modalRef} />
     </div>

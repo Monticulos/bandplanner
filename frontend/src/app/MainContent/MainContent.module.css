@@ -1,8 +1,8 @@
 ﻿.mainContent {
   height: 100%;
-  background: var(--background-color);
-  padding: var(--padding-standard);
   display: flex;
-  flex-direction: column;
-  gap: var(--padding-standard);
+  background: var(--background-color);
+  padding-inline: var(--spacing-standard);
+  padding-block: var(--spacing-large);
+  gap: var(--spacing-large);
 }
