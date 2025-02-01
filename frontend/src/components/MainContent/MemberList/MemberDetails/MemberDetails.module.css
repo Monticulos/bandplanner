@@ -1,9 +1,0 @@
-﻿.memberForm {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-}
-
-.submitButton {
-    padding: var(--padding-button);
-}
