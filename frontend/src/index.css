@@ -1,8 +1,4 @@
-html {
-  height: 100%;
-}
-
-body {
+:root {
   --background-color-panel: #111;
   --background-color: #000;
   --background-color-modal: #222;
@@ -15,9 +11,15 @@ body {
   --spacing-small: 0.5rem;
   --gap: 0.75rem;
   --gap-small: 0.25rem;
+}
 
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+html {
   height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--text-color);
 }
 
