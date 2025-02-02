@@ -1,26 +1,37 @@
 import React, { ReactElement, useRef } from "react";
 import classes from "./MemberList.module.css";
-import { MemberNameButton } from "./MemberName/MemberNameButton.tsx";
 import type { Member } from "../../../types/Member.ts";
-import { MemberDialog } from "./MemberDetails/MemberDialog";
+import { MemberDialog } from "./MemberDialog/MemberDialog";
 import { memberMockData } from "./testData/members";
 import { PersonGroupIcon } from "../../../icons/PersonGroupIcon";
+import { PlusIcon } from "../../../icons/PlusIcon";
+import { Button } from "../../../components/Button/Button";
 
 export const MemberList = (): ReactElement => {
+  const addNewLabel = "Add new";
+
+  const handleAddNew = () => {};
+
   return (
     <div className={classes.memberListContainer}>
       <h2>
         <PersonGroupIcon />
         Participants
       </h2>
-      {memberMockData.map((member) => (
-        <div key={member.name}>
-          <Member member={member} />
-        </div>
-      ))}
+      <Members />
+      <Button label={addNewLabel} icon={<PlusIcon />} onClick={handleAddNew} />
     </div>
   );
 };
+
+const Members = (): ReactElement[] =>
+  memberMockData.map((member) => (
+    <>
+      <div key={member.name}>
+        <Member member={member} />
+      </div>
+    </>
+  ));
 
 type MemberProps = {
   member: Member;
@@ -35,7 +46,7 @@ const Member = ({ member }: MemberProps): ReactElement => {
 
   return (
     <div>
-      <MemberNameButton name={member.name} onClick={() => onMemberClick()} />
+      <Button label={member.name} onClick={() => onMemberClick()} />
       <MemberDialog member={member} modalRef={modalRef} />
     </div>
   );
