@@ -1,10 +1,10 @@
 ﻿import { useEffect, useState } from "react";
 import { produceRandomTrueBetweenOneAndN } from "../utils/utils";
-import { dayWeightMock } from "../app/MainContent/Calendar/dayWeightMock";
-import { DayWeights } from "../types/DayWeights";
+import { weeklyScoresMock } from "../app/MainContent/Calendar/weeklyScoresMock";
+import { WeeklyScores } from "../types/WeeklyScores";
 
 export const UseMockGetCalendarData = () => {
-  const [data, setData] = useState<DayWeights>(null);
+  const [data, setData] = useState<WeeklyScores | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -17,7 +17,7 @@ export const UseMockGetCalendarData = () => {
         setData(null);
       } else {
         setError(null);
-        setData(dayWeightMock);
+        setData(weeklyScoresMock);
       }
 
       setIsLoading(false);

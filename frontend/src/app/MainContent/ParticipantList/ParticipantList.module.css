@@ -1,4 +1,4 @@
-.memberListContainer {
+.participantListContainer {
   display: flex;
   flex-direction: column;
   background: var(--background-color-panel);
