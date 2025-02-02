@@ -8,7 +8,7 @@ namespace Backend.Controllers;
 public class ParticipantController : ControllerBase
 {
     [HttpGet]
-    public ActionResult<Participant[]> GetMembers()
+    public ActionResult<Participant[]> GetParticipants()
     {
         Participant[] participants =
         [

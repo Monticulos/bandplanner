@@ -1,15 +1,18 @@
 ﻿import React, { FormEvent, ReactElement, RefObject } from "react";
-import classes from "./MemberDialog.module.css";
+import classes from "./ParticipantDialog.module.css";
 import { weekdays } from "../../../../constants/constants.ts";
 import { DaySlider } from "./DaySlider/DaySlider.tsx";
-import { Member } from "../../../../types/Member.ts";
+import { Participant } from "../../../../types/Participant";
 
-type MemberDialogProps = {
+type ParticipantDialogProps = {
   modalRef: RefObject<HTMLDialogElement>;
-  member: Member;
+  participant: Participant;
 };
 
-export const MemberDialog = ({ modalRef, member }: MemberDialogProps) => {
+export const ParticipantDialog = ({
+  modalRef,
+  participant,
+}: ParticipantDialogProps) => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     modalRef.current.close();
@@ -21,8 +24,8 @@ export const MemberDialog = ({ modalRef, member }: MemberDialogProps) => {
 
   return (
     <dialog ref={modalRef}>
-      <MemberDetails
-        member={member}
+      <ParticipantDetails
+        participant={participant}
         onSubmit={handleSubmit}
         onCancel={handleCancel}
       />
@@ -30,20 +33,20 @@ export const MemberDialog = ({ modalRef, member }: MemberDialogProps) => {
   );
 };
 
-type MemberDetailsProps = {
-  member: Member;
+type ParticipantDetailsProps = {
+  participant: Participant;
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;
   onCancel: () => void;
 };
 
-export const MemberDetails = ({
-  member,
+export const ParticipantDetails = ({
+  participant,
   onSubmit: handleSubmit,
   onCancel: handleCancel,
-}: MemberDetailsProps): ReactElement => {
+}: ParticipantDetailsProps): ReactElement => {
   return (
-    <form onSubmit={handleSubmit} className={classes.memberForm}>
-      <h1 className={classes.memberHeading}>{member.name}</h1>
+    <form onSubmit={handleSubmit} className={classes.form}>
+      <h1 className={classes.heading}>{participant.name}</h1>
       {weekdays.map((weekday) => (
         <DaySlider key={weekday} weekday={weekday} />
       ))}

@@ -10,7 +10,7 @@ const defaultProps: ButtonProps = {
 };
 
 describe("Button", () => {
-  it("should display name of band member", () => {
+  it("should display label", () => {
     render(<Button {...defaultProps} />);
     const button = screen.getByRole("button", { name: defaultProps.label });
     expect(button).toBeInTheDocument();

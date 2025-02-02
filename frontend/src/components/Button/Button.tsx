@@ -13,7 +13,7 @@ export const Button = ({
   icon,
 }: ButtonProps): ReactElement => {
   return (
-    <button className={classes.memberButton} onClick={() => handleClick()}>
+    <button className={classes.button} onClick={() => handleClick()}>
       {icon}
       {label}
     </button>
