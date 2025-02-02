@@ -3,7 +3,7 @@ import classes from "./Calendar.module.css";
 import { weekdays } from "../../../constants/constants.ts";
 import { getColorClass, placeWeightInBracket } from "../../../utils/utils.ts";
 import { StringUtils } from "../../../utils/StringUtils.ts";
-import { DayWeights } from "../../../types/DayWeights.ts";
+import { WeeklyScores } from "../../../types/WeeklyScores.ts";
 import { UseMockGetCalendarData } from "../../../hooks/useMockGetCalendarData";
 
 export const Calendar = (): ReactElement => {
@@ -18,8 +18,8 @@ export const Calendar = (): ReactElement => {
           <CalendarDay
             key={weekday}
             weekday={weekday}
-            weight={data[weekday as keyof DayWeights].weight}
-            descriptions={data[weekday as keyof DayWeights]?.descriptions}
+            score={data[weekday as keyof WeeklyScores].score}
+            descriptions={data[weekday as keyof WeeklyScores]?.descriptions}
           />
         ))}
     </div>
@@ -29,13 +29,13 @@ export const Calendar = (): ReactElement => {
 type CalendarDayProps = {
   key: string;
   weekday: string;
-  weight: number;
+  score: number;
   descriptions?: string[];
 };
 
 const CalendarDay = ({
   weekday,
-  weight,
+  score,
   descriptions,
 }: CalendarDayProps): ReactElement => {
   const weekdayHeadingText = StringUtils.toFirstUpper(weekday);
@@ -43,25 +43,25 @@ const CalendarDay = ({
   return (
     <div className={classes.calendarDay}>
       <h2>{weekdayHeadingText}</h2>
-      <Weight weight={weight} />
+      <Weight score={score} />
       {descriptions && <DescriptionList descriptions={descriptions} />}
     </div>
   );
 };
 
 type WeightProps = {
-  weight: number;
+  score: number;
 };
 
-const Weight = ({ weight }: WeightProps) => {
-  const weightAsSliderValue = placeWeightInBracket(weight);
+const Weight = ({ score }: WeightProps) => {
+  const weightAsSliderValue = placeWeightInBracket(score);
   const colorClass = getColorClass(weightAsSliderValue);
 
   return (
     <p>
       Day weight:
       <span className={`${classes.weight} ${classes[colorClass]}`}>
-        {weight}
+        {score}
       </span>
     </p>
   );

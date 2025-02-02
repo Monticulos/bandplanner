@@ -1,8 +1,8 @@
 import React, { ReactElement, useRef } from "react";
 import classes from "./MemberList.module.css";
-import type { Member } from "../../../types/Member.ts";
+import type { Participant } from "../../../types/Participant.ts";
 import { MemberDialog } from "./MemberDialog/MemberDialog";
-import { memberMockData } from "./testData/members";
+import { participantsMockData } from "./testData/participantsMockData";
 import { PersonGroupIcon } from "../../../icons/PersonGroupIcon";
 import { PlusIcon } from "../../../icons/PlusIcon";
 import { Button } from "../../../components/Button/Button";
@@ -25,7 +25,7 @@ export const MemberList = (): ReactElement => {
 };
 
 const Members = (): ReactElement[] =>
-  memberMockData.map((member) => (
+  participantsMockData.map((member) => (
     <>
       <div key={member.name}>
         <Member member={member} />
@@ -34,7 +34,7 @@ const Members = (): ReactElement[] =>
   ));
 
 type MemberProps = {
-  member: Member;
+  member: Participant;
 };
 
 const Member = ({ member }: MemberProps): ReactElement => {
