@@ -15,11 +15,11 @@ export const getColorClass = (sliderValue: SliderValue): string => {
   }
 };
 
-export const placeWeightInBracket = (weight: number): SliderValue => {
-  if (weight < 12) return 0;
-  if (weight < 37) return 25;
-  if (weight < 62) return 50;
-  if (weight < 87) return 75;
+export const placeScoreInBracket = (score: number): SliderValue => {
+  if (score < 12) return 0;
+  if (score < 37) return 25;
+  if (score < 62) return 50;
+  if (score < 87) return 75;
   else return 100;
 };
 

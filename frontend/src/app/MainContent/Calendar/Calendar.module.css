@@ -17,7 +17,7 @@
   height: 100%;
 }
 
-.weight {
+.score {
   color: black;
   font-weight: bold;
   padding: var(--gap-small);

@@ -1,7 +1,7 @@
 ﻿import React, { ReactElement } from "react";
 import classes from "./Calendar.module.css";
 import { weekdays } from "../../../constants/constants.ts";
-import { getColorClass, placeWeightInBracket } from "../../../utils/utils.ts";
+import { getColorClass, placeScoreInBracket } from "../../../utils/utils.ts";
 import { StringUtils } from "../../../utils/StringUtils.ts";
 import { WeeklyScores } from "../../../types/WeeklyScores.ts";
 import { UseMockGetCalendarData } from "../../../hooks/useMockGetCalendarData";
@@ -43,26 +43,24 @@ const CalendarDay = ({
   return (
     <div className={classes.calendarDay}>
       <h2>{weekdayHeadingText}</h2>
-      <Weight score={score} />
+      <Score score={score} />
       {descriptions && <DescriptionList descriptions={descriptions} />}
     </div>
   );
 };
 
-type WeightProps = {
+type ScoreProps = {
   score: number;
 };
 
-const Weight = ({ score }: WeightProps) => {
-  const weightAsSliderValue = placeWeightInBracket(score);
-  const colorClass = getColorClass(weightAsSliderValue);
+const Score = ({ score }: ScoreProps) => {
+  const scoreAsSliderValue = placeScoreInBracket(score);
+  const colorClass = getColorClass(scoreAsSliderValue);
 
   return (
     <p>
-      Day weight:
-      <span className={`${classes.weight} ${classes[colorClass]}`}>
-        {score}
-      </span>
+      Day score:
+      <span className={`${classes.score} ${classes[colorClass]}`}>{score}</span>
     </p>
   );
 };
