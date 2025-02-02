@@ -4,10 +4,15 @@ import { MemberNameButton } from "./MemberName/MemberNameButton.tsx";
 import type { Member } from "../../../types/Member.ts";
 import { MemberDialog } from "./MemberDetails/MemberDialog";
 import { memberMockData } from "./testData/members";
+import { PersonGroupIcon } from "../../../icons/PersonGroupIcon";
 
 export const MemberList = (): ReactElement => {
   return (
     <div className={classes.memberListContainer}>
+      <h2>
+        <PersonGroupIcon />
+        Participants
+      </h2>
       {memberMockData.map((member) => (
         <div key={member.name}>
           <Member member={member} />
