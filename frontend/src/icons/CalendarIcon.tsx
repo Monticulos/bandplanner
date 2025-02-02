@@ -1,4 +1,6 @@
-﻿export const CalendarIcon = () => (
+﻿import React from "react";
+
+export const CalendarIcon = () => (
   <svg
     width="32"
     height="27"
