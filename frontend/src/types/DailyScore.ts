@@ -1,4 +1,4 @@
 ﻿export type DailyScore = {
   score: number;
-  descriptions?: string[];
+  description?: string[];
 };

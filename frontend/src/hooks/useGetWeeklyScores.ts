@@ -2,26 +2,32 @@
 import { produceRandomTrueBetweenOneAndN } from "../utils/utils";
 import { weeklyScoresMock } from "../mocks/weeklyScoresMock";
 import { WeeklyScores } from "../types/WeeklyScores";
+import { API_DEV_PATH } from "../constants/constants";
 
-export const UseMockGetCalendarData = () => {
+export const UseGetWeeklyScores = () => {
   const [data, setData] = useState<WeeklyScores | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const url = `${API_DEV_PATH}/scores/week`;
 
   useEffect(() => {
-    setIsLoading(true);
+    const fetchData = async () => {
+      setIsLoading(true);
 
-    setTimeout(() => {
-      if (produceRandomTrueBetweenOneAndN(10)) {
-        setError("Error loading values. Try reloading the page.");
-        setData(null);
-      } else {
-        setError(null);
-        setData(weeklyScoresMock);
+      try {
+        const response = await fetch(url);
+        if (response.ok) {
+          const json = await response.json();
+          setData(json);
+        }
+      } catch (error) {
+        setError(error.message);
       }
 
       setIsLoading(false);
-    }, 500);
+    };
+
+    void fetchData();
   }, []);
 
   return { data, isLoading, error };
