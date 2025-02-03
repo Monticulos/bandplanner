@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--spacing-xlarge);
+  gap: var(--spacing-xl);
   width: 100%;
 }
 
@@ -10,10 +10,10 @@
   background: var(--background-color-panel);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-small);
+  gap: var(--spacing-xs);
   border-radius: var(--border-radius);
   border: var(--border);
-  padding: var(--spacing-large);
+  padding: var(--spacing-l);
   height: 100%;
 }
 
@@ -26,8 +26,8 @@
 .descriptionList {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-small);
-  padding-left: var(--spacing-small);
+  gap: var(--spacing-xs);
+  padding-left: var(--spacing-xs);
 }
 
 .red {

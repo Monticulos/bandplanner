@@ -1,20 +1,20 @@
 ﻿.form {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-small);
+  gap: var(--spacing-xs);
 }
 
 .heading {
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-m);
 }
 
 .buttonGroup {
   display: flex;
   flex-direction: column;
-  margin-top: var(--spacing-large);
-  gap: var(--spacing-medium);
+  margin-top: var(--spacing-l);
+  gap: var(--spacing-m);
 }
 
 .button {
-  padding: var(--spacing-small);
+  padding: var(--spacing-s);
 }

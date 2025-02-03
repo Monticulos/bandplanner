@@ -1,6 +1,6 @@
 ﻿.header {
   background: var(--background-color);
-  padding-top: var(--spacing-large);
-  padding-inline: var(--spacing-large);
+  padding-top: var(--spacing-l);
+  padding-inline: var(--spacing-l);
   text-align: center;
 }

@@ -5,6 +5,6 @@
   background: var(--background-color-panel);
   border-radius: var(--border-radius);
   border: var(--border);
-  padding: var(--spacing-large);
-  gap: var(--spacing-large);
+  padding: var(--spacing-l);
+  gap: var(--spacing-l);
 }
