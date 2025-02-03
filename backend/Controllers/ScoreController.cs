@@ -20,7 +20,7 @@ public class ScoreController : ControllerBase
             Thursday = new DailyScore { Score = 40 },
             Friday = new DailyScore { Score = 50 },
             Saturday = new DailyScore { Score = 60 },
-            Sunday = new DailyScore { Score = 70, Description = ["Fits for most of the participants."]},
+            Sunday = new DailyScore { Score = 70, Description = ["Fits for most of the participants."] },
         };
 
         return Ok(weeklyScores);

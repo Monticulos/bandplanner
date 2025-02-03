@@ -1,12 +1,12 @@
 ﻿import { useEffect, useState } from "react";
 import { Participant } from "../types/Participant";
-import { API_PATH_DEV } from "../constants/constants";
+import { API_DEV_PATH } from "../constants/constants";
 
-export const UseMockGetParticipants = () => {
+export const UseGetParticipants = () => {
   const [data, setData] = useState<Participant[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const url = `${API_PATH_DEV}/api/participants`;
+  const url = `${API_DEV_PATH}/api/participants`;
 
   useEffect(() => {
     const fetchData = async () => {

@@ -1,4 +1,4 @@
-﻿export const API_PATH_DEV = "http://localhost:5107";
+﻿export const API_DEV_PATH = "http://localhost:5107";
 
 export const weekdays = [
   "monday",
