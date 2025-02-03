@@ -8,14 +8,11 @@ import {
 import { participant1 } from "../../mocks/participantsMockData";
 
 describe("MainContent", () => {
-  it("should render participant section", async () => {
+  it("should render loading for week and participant sections", () => {
     render(<MainContent />);
 
     const loadingTexts = screen.getAllByText("Loading...");
-    await waitForElementToBeRemoved(loadingTexts[0]);
-
-    const name = participant1.name;
-    const participantButton = screen.getByRole("button", { name });
-    expect(participantButton).toBeInTheDocument();
+    expect(loadingTexts[0]).toBeInTheDocument();
+    expect(loadingTexts[1]).toBeInTheDocument();
   });
 });

@@ -16,7 +16,7 @@ public class ParticipantController : ControllerBase
             new Participant { Name = "Will Turner" },
             new Participant { Name = "Elizabeth Swan" }
         ];
-        
+
         return Ok(participants);
     }
 }

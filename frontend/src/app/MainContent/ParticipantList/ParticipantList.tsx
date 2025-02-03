@@ -5,7 +5,7 @@ import { ParticipantDialog } from "./ParticipantDialog/ParticipantDialog";
 import { PersonGroupIcon } from "../../../icons/PersonGroupIcon";
 import { PlusIcon } from "../../../icons/PlusIcon";
 import { Button } from "../../../components/Button/Button";
-import { UseMockGetParticipants } from "../../../hooks/useMockGetParticipants";
+import { UseGetParticipants } from "../../../hooks/useGetParticipants";
 
 export const ParticipantList = (): ReactElement => {
   return (
@@ -20,7 +20,7 @@ export const ParticipantList = (): ReactElement => {
 };
 
 const Participants = (): ReactElement => {
-  const { data, isLoading, error } = UseMockGetParticipants();
+  const { data, isLoading, error } = UseGetParticipants();
   const addNewLabel = "Add new";
 
   const handleAddNew = () => {};
@@ -31,22 +31,15 @@ const Participants = (): ReactElement => {
   return (
     <>
       {data?.map((participant) => (
-        <div key={participant.name}>
-          <Participant participant={participant} />
-        </div>
+        <Participant key={participant.name} participant={participant} />
       ))}
-      {!isLoading && (
-        <Button
-          label={addNewLabel}
-          icon={<PlusIcon />}
-          onClick={handleAddNew}
-        />
-      )}
+      <Button label={addNewLabel} icon={<PlusIcon />} onClick={handleAddNew} />
     </>
   );
 };
 
 type ParticipantProps = {
+  key: string;
   participant: Participant;
 };
 
@@ -58,9 +51,9 @@ const Participant = ({ participant }: ParticipantProps): ReactElement => {
   };
 
   return (
-    <div>
+    <>
       <Button label={participant.name} onClick={() => onParticipantClick()} />
       <ParticipantDialog participant={participant} modalRef={modalRef} />
-    </div>
+    </>
   );
 };

@@ -1,11 +1,11 @@
-﻿.helpTextBox {
+﻿.helpTextContainer {
   text-align: center;
 }
 
-.formField {
+.sliderContainer {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-small);
+  gap: var(--spacing-xxs);
 }
 
 .red {
