@@ -18,7 +18,7 @@ export const DaySlider = ({ weekday }: DaySliderProps): ReactElement => {
   };
 
   return (
-    <div key={weekday} className={classes.formField}>
+    <div key={weekday} className={classes.sliderContainer}>
       <label htmlFor={weekday}>{weekdayLabelText}</label>
       <input
         type="range"
@@ -40,8 +40,8 @@ type HelpTextProps = {
 
 const HelpText = ({ sliderValue }: HelpTextProps): ReactElement => {
   const helpText = getSliderHelpText(sliderValue);
-  const boxColorClass = getColorClass(sliderValue);
-  const className = `${classes.helpTextBox} ${classes[boxColorClass]}`;
+  const colorClass = getColorClass(sliderValue);
+  const className = `${classes.helpTextContainer} ${classes[colorClass]}`;
 
   return (
     <div className={className}>

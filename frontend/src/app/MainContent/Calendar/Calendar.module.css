@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--spacing-large);
+  gap: var(--spacing-xlarge);
   width: 100%;
 }
 
@@ -10,24 +10,24 @@
   background: var(--background-color-panel);
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
+  gap: var(--spacing-small);
   border-radius: var(--border-radius);
   border: var(--border);
-  padding: var(--spacing-standard);
+  padding: var(--spacing-large);
   height: 100%;
 }
 
 .score {
   color: black;
   font-weight: bold;
-  padding: var(--gap-small);
+  padding: var(--spacing-xxs);
 }
 
 .descriptionList {
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
-  padding-left: var(--gap);
+  gap: var(--spacing-small);
+  padding-left: var(--spacing-small);
 }
 
 .red {

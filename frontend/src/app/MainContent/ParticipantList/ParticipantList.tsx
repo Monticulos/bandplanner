@@ -31,9 +31,7 @@ const Participants = (): ReactElement => {
   return (
     <>
       {data?.map((participant) => (
-        <div key={participant.name}>
-          <Participant participant={participant} />
-        </div>
+        <Participant key={participant.name} participant={participant} />
       ))}
       <Button label={addNewLabel} icon={<PlusIcon />} onClick={handleAddNew} />
     </>
@@ -41,6 +39,7 @@ const Participants = (): ReactElement => {
 };
 
 type ParticipantProps = {
+  key: string;
   participant: Participant;
 };
 
@@ -52,9 +51,9 @@ const Participant = ({ participant }: ParticipantProps): ReactElement => {
   };
 
   return (
-    <div>
+    <>
       <Button label={participant.name} onClick={() => onParticipantClick()} />
       <ParticipantDialog participant={participant} modalRef={modalRef} />
-    </div>
+    </>
   );
 };

@@ -1,4 +1,4 @@
 ﻿.button {
-  padding: var(--spacing-standard);
-  min-width: 10rem;
+  padding: var(--spacing-medium);
+  font-size: 1rem;
 }

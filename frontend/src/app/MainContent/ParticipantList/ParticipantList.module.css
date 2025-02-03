@@ -1,9 +1,10 @@
 .participantListContainer {
   display: flex;
   flex-direction: column;
+  min-width: 15%;
   background: var(--background-color-panel);
   border-radius: var(--border-radius);
   border: var(--border);
-  padding: var(--spacing-standard);
-  gap: var(--spacing-standard);
+  padding: var(--spacing-large);
+  gap: var(--spacing-large);
 }
