@@ -1,10 +1,10 @@
 ﻿import { useEffect, useState } from "react";
 import { produceRandomTrueBetweenOneAndN } from "../utils/utils";
-import { weeklyScoresMock } from "../mocks/weeklyScoresMock";
-import { WeeklyScores } from "../types/WeeklyScores";
+import { Participant } from "../types/Participant";
+import { participantsMockData } from "../mocks/participantsMockData";
 
-export const UseMockGetCalendarData = () => {
-  const [data, setData] = useState<WeeklyScores | null>(null);
+export const UseMockGetParticipants = () => {
+  const [data, setData] = useState<Participant[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -13,11 +13,11 @@ export const UseMockGetCalendarData = () => {
 
     setTimeout(() => {
       if (produceRandomTrueBetweenOneAndN(10)) {
-        setError("Error loading values. Try reloading the page.");
+        setError("Error loading participants. Try reloading the page.");
         setData(null);
       } else {
         setError(null);
-        setData(weeklyScoresMock);
+        setData(participantsMockData);
       }
 
       setIsLoading(false);

@@ -1,11 +1,11 @@
 ﻿import React from "react";
 import { ParticipantDetails } from "./ParticipantDialog.tsx";
 import { render, screen } from "@testing-library/react";
-import { participant1 } from "../testData/participantsMockData.tsx";
 import { vi } from "vitest";
 import { weekdays } from "../../../../constants/constants.ts";
 import userEvent from "@testing-library/user-event";
 import { StringUtils } from "../../../../utils/StringUtils.ts";
+import { participant1 } from "../../../../mocks/participantsMockData";
 
 const defaultProps = {
   participant: participant1,

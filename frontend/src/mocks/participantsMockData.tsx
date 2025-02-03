@@ -1,4 +1,4 @@
-﻿import { Participant } from "../../../../types/Participant.ts";
+﻿import { Participant } from "../types/Participant.ts";
 
 export const participant1: Participant = {
   name: "Jack Sparrow",
