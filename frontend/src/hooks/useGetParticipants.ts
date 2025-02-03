@@ -1,27 +1,31 @@
 ﻿import { useEffect, useState } from "react";
-import { produceRandomTrueBetweenOneAndN } from "../utils/utils";
 import { Participant } from "../types/Participant";
-import { participantsMockData } from "../mocks/participantsMockData";
+import { API_PATH_DEV } from "../constants/constants";
 
 export const UseMockGetParticipants = () => {
   const [data, setData] = useState<Participant[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const url = `${API_PATH_DEV}/api/participants`;
 
   useEffect(() => {
-    setIsLoading(true);
+    const fetchData = async () => {
+      setIsLoading(true);
 
-    setTimeout(() => {
-      if (produceRandomTrueBetweenOneAndN(10)) {
-        setError("Error loading participants. Try reloading the page.");
-        setData(null);
-      } else {
-        setError(null);
-        setData(participantsMockData);
+      try {
+        const response = await fetch(url);
+        if (response.ok) {
+          const json = await response.json();
+          setData(json);
+        }
+      } catch (error) {
+        setError(error.message);
       }
 
       setIsLoading(false);
-    }, 500);
+    };
+
+    void fetchData();
   }, []);
 
   return { data, isLoading, error };
