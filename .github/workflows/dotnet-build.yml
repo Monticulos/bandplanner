@@ -22,7 +22,9 @@ jobs:
           dotnet-version: 8
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore --project
+        working-directory: ./backend
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
+        working-directory: ./backend
