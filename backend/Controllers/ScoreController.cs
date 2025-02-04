@@ -1,4 +1,5 @@
 ﻿using Backend.Models;
+using Backend.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,23 +7,13 @@ namespace Backend.Controllers;
 
 [Route("api/scores")]
 [ApiController]
-public class ScoreController : ControllerBase
+public class ScoreController(IScoreService service) : ControllerBase
 {
     [HttpGet]
     [Route("week")]
     public ActionResult<WeeklyScores> GetScoreForWeek()
     {
-        var weeklyScores = new WeeklyScores
-        {
-            Monday = new DailyScore { Score = 10 },
-            Tuesday = new DailyScore { Score = 20 },
-            Wednesday = new DailyScore { Score = 30 },
-            Thursday = new DailyScore { Score = 40 },
-            Friday = new DailyScore { Score = 50 },
-            Saturday = new DailyScore { Score = 60 },
-            Sunday = new DailyScore { Score = 70, Description = ["Fits for most of the participants."] },
-        };
-
+        var weeklyScores = service.GetWeeklyScores();
         return Ok(weeklyScores);
     }
 

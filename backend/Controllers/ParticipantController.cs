@@ -6,12 +6,12 @@ namespace Backend.Controllers;
 
 [Route("api/participants")]
 [ApiController]
-public class ParticipantController(IParticipantService participantService) : ControllerBase
+public class ParticipantController(IParticipantService service) : ControllerBase
 {
     [HttpGet]
     public ActionResult<Participant[]> GetParticipants()
     {
-        var participants = participantService.GetParticipants();
+        var participants = service.GetParticipants();
         return Ok(participants);
     }
 }
