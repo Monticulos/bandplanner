@@ -1,22 +1,17 @@
 using Backend.Models;
+using Backend.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers;
 
 [Route("api/participants")]
 [ApiController]
-public class ParticipantController : ControllerBase
+public class ParticipantController(IParticipantService service) : ControllerBase
 {
     [HttpGet]
     public ActionResult<Participant[]> GetParticipants()
     {
-        Participant[] participants =
-        [
-            new Participant { Name = "Jack Sparrow" },
-            new Participant { Name = "Will Turner" },
-            new Participant { Name = "Elizabeth Swan" }
-        ];
-
+        var participants = service.GetParticipants();
         return Ok(participants);
     }
 }

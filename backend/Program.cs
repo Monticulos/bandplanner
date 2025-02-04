@@ -1,3 +1,6 @@
+using Backend.Repositories;
+using Backend.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
@@ -11,7 +14,12 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddScoped<IScoreRepository, ScoreRepository>();
+builder.Services.AddScoped<IScoreService, ScoreService>();
+builder.Services.AddScoped<IParticipantRepository, ParticipantRepository>();
+builder.Services.AddScoped<IParticipantService, ParticipantService>();
 builder.Services.AddControllers();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
