@@ -1,13 +1,19 @@
-﻿using Backend.Models;
-using Backend.Repositories;
+﻿using Backend.Interfaces;
+using Backend.Models;
 
 namespace Backend.Services;
 
 public class ScoreService(IScoreRepository repository) : IScoreService
 {
-    public WeeklyScores GetWeeklyScores()
+    public DailyScore[] GetDailyScores()
     {
-        var participants = repository.GetWeeklyScores();
-        return participants;
+        var scores = repository.GetDailyScores();
+        return scores;
+    }
+    
+    public WeeklyScores GetExampleWeeklyScores()
+    {
+        var scores = repository.GetExampleWeeklyScores();
+        return scores;
     }
 }

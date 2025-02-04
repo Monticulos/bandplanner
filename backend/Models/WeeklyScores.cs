@@ -2,6 +2,7 @@
 
 public class WeeklyScores
 {
+    public int Id { get; set; }
     public required DailyScore Monday { get; set; }
     public required DailyScore Tuesday { get; set; }
     public required DailyScore Wednesday { get; set; }

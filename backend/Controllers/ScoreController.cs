@@ -1,6 +1,5 @@
-﻿using Backend.Models;
-using Backend.Services;
-using Microsoft.AspNetCore.Http;
+﻿using Backend.Interfaces;
+using Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers;
@@ -10,17 +9,18 @@ namespace Backend.Controllers;
 public class ScoreController(IScoreService service) : ControllerBase
 {
     [HttpGet]
-    [Route("week")]
-    public ActionResult<WeeklyScores> GetScoreForWeek()
+    [Route("day")]
+    public ActionResult<WeeklyScores> GetDailyScores()
     {
-        var weeklyScores = service.GetWeeklyScores();
+        var weeklyScores = service.GetDailyScores();
         return Ok(weeklyScores);
     }
-
+    
     [HttpGet]
-    [Route("day")]
-    public ActionResult<DailyScore> GetScoreForDay()
+    [Route("week/example")]
+    public ActionResult<WeeklyScores> GetExampleWeeklyScores()
     {
-        return Ok(new DailyScore { Score = 60 });
+        var weeklyScores = service.GetExampleWeeklyScores();
+        return Ok(weeklyScores);
     }
 }

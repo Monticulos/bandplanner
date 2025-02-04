@@ -1,8 +1,9 @@
 ﻿using Backend.Models;
 
-namespace Backend.Repositories;
+namespace Backend.Interfaces;
 
 public interface IScoreRepository
 {
-    WeeklyScores GetWeeklyScores();
+    DailyScore[] GetDailyScores();
+    WeeklyScores GetExampleWeeklyScores();
 }

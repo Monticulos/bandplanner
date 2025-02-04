@@ -1,8 +1,9 @@
 ﻿using Backend.Models;
 
-namespace Backend.Services;
+namespace Backend.Interfaces;
 
 public interface IParticipantService
 {
     Participant[] GetParticipants();
+    Participant[] GetExampleParticipants();
 }

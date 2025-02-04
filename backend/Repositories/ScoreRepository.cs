@@ -1,10 +1,17 @@
-﻿using Backend.Models;
+﻿using Backend.Data;
+using Backend.Interfaces;
+using Backend.Models;
 
 namespace Backend.Repositories;
 
-public class ScoreRepository : IScoreRepository
+public class ScoreRepository(AppDbContext context) : IScoreRepository
 {
-    public WeeklyScores GetWeeklyScores()
+    public DailyScore[] GetDailyScores()
+    {
+        return context.DailyScores.ToArray();
+    }
+    
+    public WeeklyScores GetExampleWeeklyScores()
     {
         var weeklyScores = new WeeklyScores
         {
