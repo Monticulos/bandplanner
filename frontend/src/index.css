@@ -1,8 +1,7 @@
 :root {
-  --background-color-panel: #111;
+  --background-gradient-panel: linear-gradient(0deg, #111111 50%, #151515);
+  --background-gradient-modal: linear-gradient(0deg, #222222 50%, #252525);
   --background-color: #000;
-  --background-color-modal: #222;
-  --background-color-hover: #bad5ec;
   --text-color: #fff;
   --border: 1px solid #a1a1a1;
   --border-radius: 0.25rem;
@@ -45,7 +44,7 @@ a:hover {
 
 dialog {
   margin: auto auto;
-  background-color: var(--background-color-modal);
+  background-image: var(--background-gradient-modal);
   color: white;
   min-width: 25%;
   padding: var(--spacing-xl);
