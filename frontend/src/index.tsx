@@ -5,7 +5,9 @@ import { Header } from "./app/Header/Header.tsx";
 import { Footer } from "./app/Footer/Footer.tsx";
 import { MainContent } from "./app/MainContent/MainContent.tsx";
 
-createRoot(document.body).render(
+const rootElement = document.getElementById("root") as HTMLElement;
+
+createRoot(rootElement).render(
   <StrictMode>
     <Header />
     <MainContent />

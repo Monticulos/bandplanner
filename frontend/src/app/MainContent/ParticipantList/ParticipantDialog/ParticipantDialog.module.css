@@ -14,7 +14,3 @@
   margin-top: var(--spacing-l);
   gap: var(--spacing-m);
 }
-
-.button {
-  padding: var(--spacing-s);
-}

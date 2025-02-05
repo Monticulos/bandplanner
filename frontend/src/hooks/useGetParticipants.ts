@@ -6,7 +6,7 @@ export const UseGetParticipants = () => {
   const [data, setData] = useState<Participant[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const url = `${API_DEV_PATH}/participants`;
+  const url = `${API_DEV_PATH}/participants/example`;
 
   useEffect(() => {
     const fetchData = async () => {

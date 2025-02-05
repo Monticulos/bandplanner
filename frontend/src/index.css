@@ -2,6 +2,7 @@
   --background-color-panel: #111;
   --background-color: #000;
   --background-color-modal: #222;
+  --background-color-hover: #bad5ec;
   --text-color: #fff;
   --border: 1px solid #a1a1a1;
   --border-radius: 0.25rem;
@@ -14,19 +15,23 @@
   --spacing-xxs: 0.25rem;
 }
 
-html {
-  height: 100%;
+* {
+  padding: 0;
+  margin: 0;
 }
 
+html,
 body {
   height: 100%;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--text-color);
+  background-color: var(--background-color);
 }
 
-* {
-  padding: 0;
-  margin: 0;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -50,23 +55,23 @@ dialog {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.33rem;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 h6 {

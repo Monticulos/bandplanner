@@ -3,6 +3,7 @@ import classes from "./ParticipantDialog.module.css";
 import { weekdays } from "../../../../constants/constants.ts";
 import { DaySlider } from "./DaySlider/DaySlider.tsx";
 import { Participant } from "../../../../types/Participant";
+import { Button } from "../../../../components/Button/Button";
 
 type ParticipantDialogProps = {
   modalRef: RefObject<HTMLDialogElement>;
@@ -51,16 +52,8 @@ export const ParticipantDetails = ({
         <DaySlider key={weekday} weekday={weekday} />
       ))}
       <div className={classes.buttonGroup}>
-        <button type="submit" className={classes.button}>
-          Submit
-        </button>
-        <button
-          type="button"
-          className={classes.button}
-          onClick={() => handleCancel()}
-        >
-          Cancel
-        </button>
+        <Button type="submit" label="Submit" />
+        <Button type="button" onClick={() => handleCancel()} label="Cancel" />
       </div>
     </form>
   );

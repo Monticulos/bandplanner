@@ -8,7 +8,7 @@ export const UseGetWeeklyScores = () => {
   const [data, setData] = useState<WeeklyScores | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const url = `${API_DEV_PATH}/scores/week`;
+  const url = `${API_DEV_PATH}/scores/week/example`;
 
   useEffect(() => {
     const fetchData = async () => {
