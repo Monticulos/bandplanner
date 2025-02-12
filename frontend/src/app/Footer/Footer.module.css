@@ -1,6 +1,5 @@
 ﻿.footer {
   background-color: var(--background-color-footer);
-  margin-top: auto;
   padding-block: var(--spacing-xl);
   display: flex;
   justify-content: center;

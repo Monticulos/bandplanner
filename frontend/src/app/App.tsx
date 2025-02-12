@@ -9,10 +9,10 @@ export function App(): ReactElement {
   return (
     <>
       <Header />
-      <div className={classes.middle}>
+      <main className={classes.mainContent}>
         <Calendar />
         <ParticipantList />
-      </div>
+      </main>
       <Footer />
     </>
   );

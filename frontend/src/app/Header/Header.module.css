@@ -1,6 +1,6 @@
 ﻿.header {
   background-color: var(--background-color-header);
-  color: #111;
+  color: var(--text-color-inverted);
   padding-block: var(--spacing-xl);
   padding-inline: var(--spacing-xxl);
 }
