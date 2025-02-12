@@ -1,7 +1,0 @@
-﻿.mainContent {
-  height: 100%;
-  display: flex;
-  padding: var(--spacing-xxl);
-  gap: var(--spacing-xxl);
-  flex-grow: 1;
-}

@@ -1,6 +1,7 @@
 ﻿.calendar {
   display: flex;
   flex-direction: column;
+  padding: var(--spacing-xxl);
   justify-content: space-between;
   gap: var(--spacing-xxl);
   width: 100%;
