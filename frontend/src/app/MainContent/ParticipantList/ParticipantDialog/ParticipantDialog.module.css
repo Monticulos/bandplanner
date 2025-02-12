@@ -3,7 +3,7 @@
   background-color: var(--background-color-cards);
   color: white;
   min-width: 25%;
-  padding: var(--spacing-xxl);
+  padding: var(--spacing-2xl);
   border: var(--border);
   border-radius: var(--border-radius);
 }

@@ -1,8 +1,11 @@
 ﻿.calendar {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  padding: calc(2 * var(--spacing-xxl));
-  gap: var(--spacing-xxl);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(20rem, 1fr)
+  ); /* sets number of columns automatically */
+  padding: var(--spacing-3xl);
+  gap: var(--spacing-2xl);
   width: 100%;
 }
 
@@ -18,7 +21,7 @@
 .score {
   color: black;
   font-weight: bold;
-  padding: var(--spacing-xxs);
+  padding: var(--spacing-2xs);
 }
 
 .descriptionList {
