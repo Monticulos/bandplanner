@@ -5,4 +5,5 @@
   background-color: var(--background-color-cards);
   padding: var(--spacing-xl);
   gap: var(--spacing-l);
+  height: 80vh;
 }

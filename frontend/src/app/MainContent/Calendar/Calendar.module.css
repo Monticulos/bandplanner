@@ -1,8 +1,7 @@
 ﻿.calendar {
-  display: flex;
-  flex-direction: column;
-  padding: var(--spacing-xxl);
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding: calc(2 * var(--spacing-xxl));
   gap: var(--spacing-xxl);
   width: 100%;
 }
@@ -14,7 +13,6 @@
   gap: var(--spacing-xs);
   border-radius: var(--border-radius);
   padding: var(--spacing-xl);
-  height: 100%;
 }
 
 .score {
