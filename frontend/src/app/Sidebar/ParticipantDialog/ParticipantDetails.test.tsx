@@ -2,10 +2,10 @@
 import { ParticipantDetails } from "./ParticipantDialog.tsx";
 import { render, screen } from "@testing-library/react";
 import { vi } from "vitest";
-import { weekdays } from "../../../../constants/constants.ts";
+import { weekdays } from "../../../constants/constants.ts";
 import userEvent from "@testing-library/user-event";
-import { StringUtils } from "../../../../utils/StringUtils.ts";
-import { participant1 } from "../../../../mocks/participantsMockData";
+import { StringUtils } from "../../../utils/StringUtils.ts";
+import { participant1 } from "../../../mocks/participantsMockData";
 
 const defaultProps = {
   participant: participant1,
