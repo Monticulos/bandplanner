@@ -1,10 +1,10 @@
 ﻿import React, { ReactElement } from "react";
 import classes from "./Calendar.module.css";
-import { weekdays } from "../../../constants/constants.ts";
-import { getColorClass, placeScoreInBracket } from "../../../utils/utils.ts";
-import { StringUtils } from "../../../utils/StringUtils.ts";
-import { WeeklyScores } from "../../../types/WeeklyScores.ts";
-import { UseGetWeeklyScores } from "../../../hooks/useGetWeeklyScores";
+import { weekdays } from "../../constants/constants.ts";
+import { getColorClass, placeScoreInBracket } from "../../utils/utils.ts";
+import { StringUtils } from "../../utils/StringUtils.ts";
+import { WeeklyScores } from "../../types/WeeklyScores.ts";
+import { UseGetWeeklyScores } from "../../hooks/useGetWeeklyScores";
 
 export const Calendar = (): ReactElement => {
   const { data, isLoading, error } = UseGetWeeklyScores();

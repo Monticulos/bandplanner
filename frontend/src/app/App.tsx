@@ -1,9 +1,9 @@
 ﻿import { Header } from "./Header/Header";
 import { Footer } from "./Footer/Footer";
 import React, { ReactElement } from "react";
-import { ParticipantList } from "./MainContent/ParticipantList/ParticipantList";
+import { Sidebar } from "./Sidebar/Sidebar";
 import classes from "./App.module.css";
-import { Calendar } from "./MainContent/Calendar/Calendar";
+import { Calendar } from "./Calendar/Calendar";
 
 export function App(): ReactElement {
   return (
@@ -11,7 +11,7 @@ export function App(): ReactElement {
       <Header />
       <main className={classes.mainContent}>
         <Calendar />
-        <ParticipantList />
+        <Sidebar />
       </main>
       <Footer />
     </>

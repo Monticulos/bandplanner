@@ -1,8 +1,8 @@
 ﻿import classes from "./DaySlider.module.css";
 import React, { ChangeEvent, ReactElement, useState } from "react";
-import { getColorClass } from "../../../../../utils/utils.ts";
-import { SliderValue } from "../../../../../types/SliderValue.ts";
-import { StringUtils } from "../../../../../utils/StringUtils.ts";
+import { getColorClass } from "../../../../utils/utils.ts";
+import { SliderValue } from "../../../../types/SliderValue.ts";
+import { StringUtils } from "../../../../utils/StringUtils.ts";
 
 type DaySliderProps = {
   key: string;
