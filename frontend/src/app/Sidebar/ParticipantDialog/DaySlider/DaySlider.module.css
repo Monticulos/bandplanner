@@ -5,25 +5,25 @@
 .sliderContainer {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xxs);
+  gap: var(--spacing-2xs);
 }
 
 .red {
-  color: #ff0000;
+  color: #dd5555;
 }
 
 .orange {
-  color: #ffa700;
+  color: #dd9955;
 }
 
 .yellow {
-  color: #fff400;
+  color: #dddd55;
 }
 
 .lightGreen {
-  color: #a3ff00;
+  color: #99dd55;
 }
 
 .strongGreen {
-  color: #2cba00;
+  color: #55dd55;
 }

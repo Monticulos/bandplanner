@@ -1,9 +1,9 @@
 ﻿import React, { FormEvent, ReactElement, RefObject } from "react";
 import classes from "./ParticipantDialog.module.css";
-import { weekdays } from "../../../../constants/constants.ts";
+import { weekdays } from "../../../constants/constants.ts";
 import { DaySlider } from "./DaySlider/DaySlider.tsx";
-import { Participant } from "../../../../types/Participant";
-import { Button } from "../../../../components/Button/Button";
+import { Participant } from "../../../types/Participant";
+import { Button } from "../../../components/Button/Button";
 
 type ParticipantDialogProps = {
   modalRef: RefObject<HTMLDialogElement>;
@@ -24,7 +24,7 @@ export const ParticipantDialog = ({
   };
 
   return (
-    <dialog ref={modalRef}>
+    <dialog ref={modalRef} className={classes.dialog}>
       <ParticipantDetails
         participant={participant}
         onSubmit={handleSubmit}

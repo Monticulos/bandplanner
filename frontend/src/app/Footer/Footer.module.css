@@ -1,7 +1,6 @@
 ﻿.footer {
-  margin-top: auto;
-  padding-inline: var(--spacing-xl);
-  padding-bottom: var(--spacing-xl);
   display: flex;
   justify-content: center;
+  padding-block: var(--spacing-xl);
+  background-color: var(--background-color-footer);
 }

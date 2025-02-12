@@ -1,5 +1,6 @@
 ﻿.header {
-  padding-top: var(--spacing-l);
-  padding-inline: var(--spacing-l);
-  text-align: center;
+  padding-block: var(--spacing-xl);
+  padding-inline: var(--spacing-2xl);
+  background-color: var(--background-color-header);
+  color: var(--text-color-inverted);
 }

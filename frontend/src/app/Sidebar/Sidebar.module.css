@@ -1,0 +1,9 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+  padding: var(--spacing-xl);
+  background-color: var(--background-color-cards);
+  min-width: var(--sidebar-width);
+  height: 94vh; /* Needed to extend app to full height. Alternative solution wanted */
+}

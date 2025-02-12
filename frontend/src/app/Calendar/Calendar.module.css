@@ -1,26 +1,27 @@
 ﻿.calendar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: var(--spacing-xl);
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(20rem, 1fr)
+  ); /* sets number of columns automatically */
+  gap: var(--spacing-2xl);
+  padding: var(--spacing-3xl);
   width: 100%;
 }
 
 .calendarDay {
-  background-image: var(--background-gradient-panel);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+  padding: var(--spacing-xl);
+  background-color: var(--background-color-cards);
   border-radius: var(--border-radius);
-  border: var(--border);
-  padding: var(--spacing-l);
-  height: 100%;
 }
 
 .score {
   color: black;
   font-weight: bold;
-  padding: var(--spacing-xxs);
+  padding: var(--spacing-2xs);
 }
 
 .descriptionList {
@@ -31,21 +32,21 @@
 }
 
 .red {
-  color: #ff0000;
+  color: #dd5555;
 }
 
 .orange {
-  color: #ffa700;
+  color: #dd9955;
 }
 
 .yellow {
-  color: #fff400;
+  color: #dddd55;
 }
 
 .lightGreen {
-  color: #a3ff00;
+  color: #99dd55;
 }
 
 .strongGreen {
-  color: #2cba00;
+  color: #55dd55;
 }

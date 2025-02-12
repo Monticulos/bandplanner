@@ -1,17 +1,22 @@
 :root {
-  --background-gradient-panel: linear-gradient(0deg, #111111 50%, #151515);
-  --background-gradient-modal: linear-gradient(0deg, #222222 50%, #252525);
-  --background-color: #000;
-  --text-color: #fff;
+  --background-color-app: #111;
+  --background-color-cards: #222;
+  --background-color-footer: #000;
+  --background-color-header: #eee;
+  --text-color: #eee;
+  --text-color-inverted: #111;
   --border: 1px solid #a1a1a1;
-  --border-radius: 0.25rem;
+  --border-radius: 0.3rem;
   --box-shadow: #000 0 0 1rem;
+  --sidebar-width: 15rem;
+  --spacing-3xl: 6rem;
+  --spacing-2xl: 3rem;
   --spacing-xl: 2rem;
   --spacing-l: 1.5rem;
   --spacing-m: 1rem;
   --spacing-s: 0.75rem;
   --spacing-xs: 0.5rem;
-  --spacing-xxs: 0.25rem;
+  --spacing-2xs: 0.25rem;
 }
 
 * {
@@ -24,11 +29,11 @@ body {
   height: 100%;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color-app);
 }
 
 #root {
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -40,17 +45,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-dialog {
-  margin: auto auto;
-  background-image: var(--background-gradient-modal);
-  color: white;
-  min-width: 25%;
-  padding: var(--spacing-xl);
-  border: var(--border);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
 }
 
 h1 {

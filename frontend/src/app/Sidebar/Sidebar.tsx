@@ -1,15 +1,15 @@
 import React, { ReactElement, useRef } from "react";
-import classes from "./ParticipantList.module.css";
-import type { Participant } from "../../../types/Participant.ts";
+import classes from "./Sidebar.module.css";
+import type { Participant } from "../../types/Participant.ts";
 import { ParticipantDialog } from "./ParticipantDialog/ParticipantDialog";
-import { PersonGroupIcon } from "../../../icons/PersonGroupIcon";
-import { PlusIcon } from "../../../icons/PlusIcon";
-import { Button } from "../../../components/Button/Button";
-import { UseGetParticipants } from "../../../hooks/useGetParticipants";
+import { PersonGroupIcon } from "../../icons/PersonGroupIcon";
+import { PlusIcon } from "../../icons/PlusIcon";
+import { Button } from "../../components/Button/Button";
+import { UseGetParticipants } from "../../hooks/useGetParticipants";
 
-export const ParticipantList = (): ReactElement => {
+export const Sidebar = (): ReactElement => {
   return (
-    <div className={classes.participantListContainer}>
+    <div className={classes.sidebar}>
       <h2>
         <PersonGroupIcon />
         Participants
