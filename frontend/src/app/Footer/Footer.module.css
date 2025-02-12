@@ -1,6 +1,6 @@
 ﻿.footer {
-  background-color: var(--background-color-footer);
-  padding-block: var(--spacing-xl);
   display: flex;
   justify-content: center;
+  padding-block: var(--spacing-xl);
+  background-color: var(--background-color-footer);
 }

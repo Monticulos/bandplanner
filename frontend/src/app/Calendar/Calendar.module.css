@@ -4,18 +4,18 @@
     auto-fit,
     minmax(20rem, 1fr)
   ); /* sets number of columns automatically */
-  padding: var(--spacing-3xl);
   gap: var(--spacing-2xl);
+  padding: var(--spacing-3xl);
   width: 100%;
 }
 
 .calendarDay {
-  background-color: var(--background-color-cards);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
-  border-radius: var(--border-radius);
   padding: var(--spacing-xl);
+  background-color: var(--background-color-cards);
+  border-radius: var(--border-radius);
 }
 
 .score {
@@ -32,21 +32,21 @@
 }
 
 .red {
-  color: #ff0000;
+  color: #dd5555;
 }
 
 .orange {
-  color: #ffa700;
+  color: #dd9955;
 }
 
 .yellow {
-  color: #fff400;
+  color: #dddd55;
 }
 
 .lightGreen {
-  color: #a3ff00;
+  color: #99dd55;
 }
 
 .strongGreen {
-  color: #2cba00;
+  color: #55dd55;
 }

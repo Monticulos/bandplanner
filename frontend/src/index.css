@@ -6,8 +6,9 @@
   --text-color: #eee;
   --text-color-inverted: #111;
   --border: 1px solid #a1a1a1;
-  --border-radius: 0.33rem;
+  --border-radius: 0.3rem;
   --box-shadow: #000 0 0 1rem;
+  --sidebar-width: 15rem;
   --spacing-3xl: 6rem;
   --spacing-2xl: 3rem;
   --spacing-xl: 2rem;
