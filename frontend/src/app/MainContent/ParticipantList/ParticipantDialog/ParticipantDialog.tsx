@@ -24,7 +24,7 @@ export const ParticipantDialog = ({
   };
 
   return (
-    <dialog ref={modalRef}>
+    <dialog ref={modalRef} className={classes.dialog}>
       <ParticipantDetails
         participant={participant}
         onSubmit={handleSubmit}

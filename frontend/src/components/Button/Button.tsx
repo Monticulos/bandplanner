@@ -5,7 +5,7 @@ export type ButtonProps = {
   label: string;
   onClick?: () => void;
   icon?: ReactElement;
-  type: "button" | "submit" | "reset";
+  type?: "button" | "submit" | "reset";
 };
 
 export const Button = ({

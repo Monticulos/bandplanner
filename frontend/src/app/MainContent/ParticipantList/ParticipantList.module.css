@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   min-width: 15%;
-  background-image: var(--background-gradient-panel);
+  background-color: var(--background-color-cards);
   border-radius: var(--border-radius);
-  border: var(--border);
   padding: var(--spacing-l);
   gap: var(--spacing-l);
 }

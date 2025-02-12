@@ -1,11 +1,11 @@
 :root {
-  --background-gradient-panel: linear-gradient(0deg, #111111 50%, #151515);
-  --background-gradient-modal: linear-gradient(0deg, #222222 50%, #252525);
-  --background-color: #000;
+  --background-color-app: #111;
+  --background-color-cards: #222;
   --text-color: #fff;
   --border: 1px solid #a1a1a1;
   --border-radius: 0.25rem;
   --box-shadow: #000 0 0 1rem;
+  --spacing-xxl: 3rem;
   --spacing-xl: 2rem;
   --spacing-l: 1.5rem;
   --spacing-m: 1rem;
@@ -24,7 +24,7 @@ body {
   height: 100%;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color-app);
 }
 
 #root {
@@ -40,17 +40,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-dialog {
-  margin: auto auto;
-  background-image: var(--background-gradient-modal);
-  color: white;
-  min-width: 25%;
-  padding: var(--spacing-xl);
-  border: var(--border);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
 }
 
 h1 {

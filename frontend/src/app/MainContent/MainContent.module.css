@@ -1,8 +1,7 @@
 ﻿.mainContent {
   height: 100%;
   display: flex;
-  padding-inline: var(--spacing-l);
-  padding-block: var(--spacing-xl);
-  gap: var(--spacing-xl);
+  padding: var(--spacing-xxl);
+  gap: var(--spacing-xxl);
   flex-grow: 1;
 }

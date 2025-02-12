@@ -2,17 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-xxl);
   width: 100%;
 }
 
 .calendarDay {
-  background-image: var(--background-gradient-panel);
+  background-color: var(--background-color-cards);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
   border-radius: var(--border-radius);
-  border: var(--border);
   padding: var(--spacing-l);
   height: 100%;
 }

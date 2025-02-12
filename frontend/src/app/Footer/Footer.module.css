@@ -1,7 +1,7 @@
 ﻿.footer {
   margin-top: auto;
-  padding-inline: var(--spacing-xl);
-  padding-bottom: var(--spacing-xl);
+  padding-inline: var(--spacing-xxl);
+  padding-bottom: var(--spacing-xxl);
   display: flex;
   justify-content: center;
 }
