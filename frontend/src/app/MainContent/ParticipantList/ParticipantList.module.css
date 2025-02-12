@@ -4,6 +4,6 @@
   min-width: 15%;
   background-color: var(--background-color-cards);
   border-radius: var(--border-radius);
-  padding: var(--spacing-l);
+  padding: var(--spacing-xl);
   gap: var(--spacing-l);
 }

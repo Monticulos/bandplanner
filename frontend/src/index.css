@@ -1,9 +1,12 @@
 :root {
   --background-color-app: #111;
   --background-color-cards: #222;
-  --text-color: #fff;
+  --background-color-footer: #000;
+  --background-color-header: #eee;
+  --text-color: #eee;
+  --text-color-inverted: #111;
   --border: 1px solid #a1a1a1;
-  --border-radius: 0.25rem;
+  --border-radius: 0.33rem;
   --box-shadow: #000 0 0 1rem;
   --spacing-xxl: 3rem;
   --spacing-xl: 2rem;
